@@ -1,0 +1,58 @@
+fruits = {"apple", "orange", "banana", "banana"}
+print("fruits =", fruits)  # With each run the order might be different since sets are unordered and unindexed
+# You cannot access items in a set by referring to an index, since sets are unordered the items has no index.
+for fruit in fruits:
+    print(fruit)
+
+print("\"banana\" in fruits =", "banana" in fruits)
+fruits.add("coconut")
+print("fruits =", fruits)
+fruits.update({"strawberry", "pineapple"})
+print("fruits =", fruits)
+print("len(fruits) =", len(fruits))
+fruits.remove("banana")
+print("fruits =", fruits)
+# fruits.remove("banana") This will give an error since banana is no longer in the set
+fruits.discard("strawberry")
+print("fruits =", fruits)
+print("fruits =", fruits)  # Discard won't give an error if the item to be removed does not exist in the set
+print("fruits.pop() =", fruits.pop())
+newFruits = fruits.copy()
+print("newFruits is fruits =", newFruits is fruits)
+print("newFruits == fruits =", newFruits == fruits)
+fruits.clear()
+print("fruits =", fruits)
+del fruits
+# print("fruits =", fruits) # This will give a not defined error for fruits
+print("newFruits =", newFruits)
+fruits = set(newFruits)
+print("newFruits is fruits =", newFruits is fruits)
+print("newFruits == fruits =", newFruits == fruits)
+fruits.add("banana")
+newFruits.add("strawberry")
+print("fruits =", fruits)
+print("newFruits =", newFruits)
+print("fruits.difference(newFruits) =", fruits.difference(newFruits))
+print("newFruits.difference(fruits) =", newFruits.difference(fruits))
+print("fruits.intersection(newFruits) =", fruits.intersection(newFruits))
+print("fruits.union(newFruits) =", fruits.union(newFruits))
+fruits.difference_update(newFruits)
+print("fruits =", fruits)
+fruits = newFruits.copy()
+fruits.remove("strawberry")
+fruits.add("banana")
+print("fruits =", fruits)
+fruits.intersection_update(newFruits)
+print("fruits =", fruits)
+fruits.add("banana")
+print("fruits =", fruits)
+print("newFruits =", newFruits)
+print("fruits.symmetric_difference(newFruits) =", fruits.symmetric_difference(newFruits))
+fruits.symmetric_difference_update(newFruits)
+print("fruits =", fruits)
+fruits = {"banana"}
+print("fruits =", fruits)
+print("newFruits =", newFruits)
+print("fruits.issubset(newFruits) =", fruits.issubset(newFruits))
+print("fruits.issuperset(newFruits) =", fruits.issuperset(newFruits))
+print("fruits.isdisjoint(newFruits) =", fruits.isdisjoint(newFruits))
