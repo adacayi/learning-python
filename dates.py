@@ -1,6 +1,7 @@
-import datetime
+from datetime import datetime, timedelta
+from pytz import timezone
 
-now = datetime.datetime.now()
+now = datetime.now()
 print(now)
 print()
 print(now.year)
@@ -10,8 +11,12 @@ print(now.strftime("%B"))
 # print(now.strftime("%D"))
 
 print()
-firstOfMay = datetime.datetime(2019, 5, 1)
+firstOfMay = datetime(2019, 5, 1)
 print(firstOfMay)
+firstOfMay = firstOfMay + timedelta(hours=2, minutes=34, seconds=59)
+print(firstOfMay)
+firstOfMay = firstOfMay.replace(tzinfo=timezone("UTC"))
+print(firstOfMay.strftime("%a, %d %b %Y %H:%M:%S %Z"))
 
 """
 %a	Weekday, short version	Wed	
