@@ -1,6 +1,10 @@
 print("Enter your name")
 name = input()
-print("Hello", name)
+print("Enter your age")
+age = input()
+print("Hello", name, "at age", age)
+print("Hello {} at age {}".format(name, age))
+print("Hello %s at age %d" % (name, age))
 
 x = "this is a string"
 y = 'this is another string with single quotes'
