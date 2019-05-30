@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from pytz import timezone
+from dateutil.parser import parse
 
 now = datetime.now()
 print(now)
@@ -16,7 +17,10 @@ print(firstOfMay)
 firstOfMay = firstOfMay + timedelta(hours=2, minutes=34, seconds=59)
 print(firstOfMay)
 firstOfMay = firstOfMay.replace(tzinfo=timezone("UTC"))
-print(firstOfMay.strftime("%a, %d %b %Y %H:%M:%S %Z"))
+first_of_may_string = firstOfMay.strftime("%a, %d %b %Y %H:%M:%S %Z")
+print(first_of_may_string)
+first_of_may_date = parse(first_of_may_string)
+print(first_of_may_date)
 
 """
 %a	Weekday, short version	Wed	
