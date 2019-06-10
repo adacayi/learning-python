@@ -1,4 +1,6 @@
 # If we change this file name to numbers then we can not debug and have an error. There might be a conflict
+from random import randint
+
 x = 423425364564562345234534545647456474567
 y = 3.0
 z = 2 + 1j
@@ -22,3 +24,4 @@ print(z * z)
 
 y = 23e-12
 print("value = ", y, " type =", type(y))
+print(randint(2,3)) # randint(a,b) returns integers in [a,b] including both a and b
