@@ -1,7 +1,7 @@
 print("Enter your name")
 name = input()
 print("Enter your age")
-age = input()
+age = int(input())
 print("Hello", name, "at age", age)
 print("Hello {} at age {}".format(name, age))
 print("Hello %s at age %d" % (name, age))

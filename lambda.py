@@ -1,5 +1,13 @@
+def hello_function():
+    print("Hello")
+
+
+hello = hello_function
+
+hello()
+
 power = lambda x, y: x ** y
-print power(3, 4)
+print(power(3, 4))
 
 
 def multiply(times):
@@ -10,4 +18,3 @@ double = multiply(2)
 triple = multiply(3)
 print(double(3))
 print(triple(5))
-
