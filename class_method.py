@@ -15,6 +15,7 @@ p2 = Person("Salih")
 p1.person_country = "France"
 p2.person_country = "Italy"
 p1.print_class()
-print("\n")
 p2.print_class()
+print(p1.name)
+print(p2.name)
 
